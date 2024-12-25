@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me - ZMOREPHOTOGRAPH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .site-header {
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            transition: top 0.3s;
+        }
+        .site-branding {
+            text-align: center;
+            color: black;
+            font-size: 24px;
+        }
+        .main-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+        }
+        .menu li a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .footer {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+        .footer__container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .copyright {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="masthead" class="site-header">
+        <div class="site-branding">
+            ZMOREPHOTOGRAPH
+        </div>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <ul class="menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="portfolio.html">Photographic portfolio</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content" class="site-content" style="margin-top: 100px;">
+        <section id="about">
+            <h1 class="about-title">About me</h1>
+            <div class="about-content">
+                <img src="image/image (1).jpg" alt="Profile Image" class="about-image">
+                <div class="about-text">
+                    <h2>Zmore</h2>
+                    <h4>photography Video creator.</h4>
+                    <h4>Mainly shoot photography.</h4>
+                    <h4>Travel and outdoor related content.</h4>
+                    <h4>A photowriter in the making.</h4>
+                    <h4>Born in China in 2004, is currently studying Digital Media Art at the School of Creativity and Innovation, Xiamen University.</h4>
+                    <p>I am keen to embark on a journey, to go outdoors, to explore those hidden in the mountains, lakes, seas, streets and streets of the beautiful picture. Every time I set out, it was like a grand adventure, and the camera was my most loyal partner. When I was in the vast desert, watching the dunes outline soft lines in the sun, I couldn't wait to press the shutter. At that moment, the hot sand and whistling wind seemed to be frozen in the picture; Or walk in the old town, the SLATE road, mottled walls, the street elderly kind smile, click, the years of quiet appearance will be my permanent collection.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="copyright">
+                © ZMOREPHOTOGRAPH 2024
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            const header = document.getElementById("masthead");
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.style.top = "-100px";
+            } else {
+                header.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html> 
